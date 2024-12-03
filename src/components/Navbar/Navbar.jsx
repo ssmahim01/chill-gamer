@@ -11,10 +11,15 @@ const Navbar = () => {
     </>
 
   return (
-    <div className="navbar bg-base-200 shadow-md">
+    <div className="navbar border-b border-gray-300 shadow-lg *:text-white lg:px-20 px-8 py-3" style={{
+      backgroundImage: "url('gamer-navbar.jpg')",
+      backgroundRepeat: "no-repeat",
+      // backgroundPosition: "center",
+      backgroundSize: "cover",
+    }}>
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn bg-fuchsia-500 border-none text-white lg:hidden mr-3 shadow-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -37,7 +42,10 @@ const Navbar = () => {
            {allLink}
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl font-bold">Chill Gamer</a>
+       <div className="flex gap-2 items-center">
+        <img className="w-12 h-12 rounded-xl" src="game-logo.webp" alt="Logo of Game" />
+       <h2 className="hidden md:block text-2xl font-bold">Chill Gamer</h2>
+       </div>
       </div>
       <div className="navbar-center hidden lg:flex *:gap-4">
         <ul className="menu menu-horizontal px-1">
@@ -46,11 +54,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <div className="flex gap-3 items-center">
-          <button className="btn bg-fuchsia-500 text-white font-bold px-4">
+          <button className="btn bg-teal-500 border-none text-white font-bold px-5">
             Login
           </button>
 
-          <button className="btn btn-accent text-white font-bold px-4">
+          <button className="btn btn-outline hover:btn-primary border-2 border-white text-white font-bold px-5">
             Register
           </button>
         </div>
