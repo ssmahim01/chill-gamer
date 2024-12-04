@@ -1,15 +1,14 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { BiLogOut } from "react-icons/bi";
 import "./Navbar.css";
-import 'react-tooltip/dist/react-tooltip.css';
+import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
-  const navigate = useNavigate();
 
   const handleLogOut = () => {
     logOutUser();
@@ -21,7 +20,6 @@ const Navbar = () => {
       showConfirmButton: false,
       timer: 2000,
     });
-    navigate("/");
   };
 
   const allLink = (
@@ -105,11 +103,20 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && user?.email ? (
           <div className="flex gap-3 items-center">
-           <Tooltip anchorSelect=".my-anchor-element" place="left">
-            {user?.displayName}
-           </Tooltip>
-           <img className="my-anchor-element w-14 h-14 rounded-full border-4 border-amber-300" src={user?.photoURL} alt={user?.displayName} />
-            <button onClick={handleLogOut} className="btn btn-error text-white font-bold px-4"><BiLogOut className="text-xl"/> Log Out</button>
+            <Tooltip anchorSelect=".my-anchor-element" place="left">
+              {user?.displayName}
+            </Tooltip>
+            <img
+              className="my-anchor-element w-14 h-14 rounded-full border-4 border-amber-300"
+              src={user?.photoURL}
+              alt={user?.displayName}
+            />
+            <button
+              onClick={handleLogOut}
+              className="btn btn-error text-white font-bold px-4"
+            >
+              <BiLogOut className="text-xl" /> Log Out
+            </button>
           </div>
         ) : (
           <div className="flex gap-3 items-center">
