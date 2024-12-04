@@ -15,7 +15,7 @@ const Banner = () => {
         loop={true}
         slidesPerView={1}
         // pagination={{clickable:true}}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
         className="w-full lg:h-96 h-72"
       >
         {/* <SwiperSlide>
@@ -74,7 +74,7 @@ const Banner = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="lg:w-2/4 md:w-3/5 w-11/12 mx-auto flex flex-col justify-center items-center gap-3 lg:py-20 py-7">
+            <div className="lg:w-2/4 md:w-3/5 w-11/12 mx-auto flex flex-col justify-center items-center gap-3 lg:py-20 md:py-7 py-4">
               <h2 className="md:text-3xl text-amber-500 text-2xl font-extrabold">Professional Esport Gamer</h2>
               <p className="text-white/80 font-bold text-center">
                 The professional esport gamers will play for their different purpose. They have perseverance and always try to be stay with patience.

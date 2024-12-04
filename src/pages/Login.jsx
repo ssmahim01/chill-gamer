@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { loginWithEmailPass, loginWithGoogle, setUser, loginWithGithub } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLoginWithEmailPass = (e) => {
     e.preventDefault();
@@ -27,6 +30,8 @@ const Login = () => {
         showConfirmButton: false,
         timer: 2000,
       });
+
+      navigate(location?.state ? location.state : "/");
     })
 
     .catch(error => {
@@ -53,6 +58,7 @@ const Login = () => {
           showConfirmButton: false,
           timer: 2000,
         });
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         // console.log(error.message);
@@ -78,15 +84,14 @@ const Login = () => {
           showConfirmButton: false,
           timer: 2000,
         });
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         // console.log(error.message);
-        Swal.fire({
-          title: "Error!",
-          text: "Failed to github login",
-          icon: "error",
-          confirmButtonText: "Okay",
-        });
+
+        toast.error("Failed to github login", {
+          position: "top-center"
+      });
       });
   };
 
@@ -152,10 +157,9 @@ const Login = () => {
             </div>
 
             <div
-              onClick={handleGoogleLogin}
               className="w-11/12 mx-auto pb-8 flex flex-col gap-5"
             >
-              <button className="btn btn-outline border border-amber-200 rounded-full shadow-md font-bold">
+              <button onClick={handleGoogleLogin} className="btn btn-outline border border-amber-200 rounded-full shadow-md font-bold">
                 Login With Google <FcGoogle className="text-xl" />
               </button>
 

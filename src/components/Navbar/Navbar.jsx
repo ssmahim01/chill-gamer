@@ -1,7 +1,29 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import { BiLogOut } from "react-icons/bi";
 import "./Navbar.css";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    logOutUser();
+    Swal.fire({
+      title: "Success",
+      position: "center",
+      text: "Log Out Successful",
+      icon: "success",
+      showConfirmButton: false,
+      timer: 2000,
+    });
+    navigate("/");
+  };
+
   const allLink = (
     <>
       <NavLink to="/">
@@ -10,15 +32,22 @@ const Navbar = () => {
       <NavLink to="/allReviews">
         <span className="font-bold">All Reviews</span>
       </NavLink>
-      <NavLink to="/addReview">
-        <span className="font-bold">Add Review</span>
-      </NavLink>
-      <NavLink to="/myReviews">
-        <span className="font-bold">My Reviews</span>
-      </NavLink>
-      <NavLink to="/gameWatchList">
-        <span className="font-bold">Game WatchList</span>
-      </NavLink>
+
+      {user && (
+        <>
+          <NavLink to="/addReview">
+            <span className="font-bold">Add Review</span>
+          </NavLink>
+
+          <NavLink to="/myReviews">
+            <span className="font-bold">My Reviews</span>
+          </NavLink>
+
+          <NavLink to="/gameWatchList">
+            <span className="font-bold">Game WatchList</span>
+          </NavLink>
+        </>
+      )}
     </>
   );
 
@@ -56,7 +85,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-3 w-56 p-3 shadow-sm"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-3 w-56 p-3 shadow-sm text-black text-opacity-70"
           >
             {allLink}
           </ul>
@@ -74,19 +103,29 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{allLink}</ul>
       </div>
       <div className="navbar-end">
-        <div className="flex gap-3 items-center">
-          <Link to="/login">
-            <button className="btn bg-emerald-500 border-none text-white font-bold px-5">
-              Login
-            </button>
-          </Link>
+        {user && user?.email ? (
+          <div className="flex gap-3 items-center">
+           <Tooltip anchorSelect=".my-anchor-element" place="left">
+            {user?.displayName}
+           </Tooltip>
+           <img className="my-anchor-element w-14 h-14 rounded-full border-4 border-amber-300" src={user?.photoURL} alt={user?.displayName} />
+            <button onClick={handleLogOut} className="btn btn-error text-white font-bold px-4"><BiLogOut className="text-xl"/> Log Out</button>
+          </div>
+        ) : (
+          <div className="flex gap-3 items-center">
+            <Link to="/login">
+              <button className="btn bg-emerald-500 border-none text-white font-bold px-5">
+                Login
+              </button>
+            </Link>
 
-          <Link to="/register">
-            <button className="btn btn-outline hover:btn-primary border-2 border-white text-white font-bold px-5">
-              Register
-            </button>
-          </Link>
-        </div>
+            <Link to="/register">
+              <button className="btn btn-outline hover:btn-primary border-2 border-white text-white font-bold px-5">
+                Register
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

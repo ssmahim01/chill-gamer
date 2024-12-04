@@ -17,12 +17,12 @@ const Footer = () => {
           />
           <h2 className="text-3xl font-bold">Chill Gamer</h2>
         </div>
-        <p className="mt-3 text-lg font-bold">
+        <p className="mt-3 md:text-lg text-base font-bold">
           <span>Chill Gamer of MZ Dev. Ltd.</span>
           <br />
           <span>Providing services since 2023</span>
         </p>
-        <p className="text-gray-700 text-base font-semibold">
+        <p className="text-gray-700 md:text-base font-semibold">
           Copyright © {new Date().getFullYear()} - All right reserved
         </p>
       </aside>
