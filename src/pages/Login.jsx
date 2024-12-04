@@ -6,7 +6,39 @@ import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { loginWithGoogle, setUser, loginWithGithub } = useContext(AuthContext);
+  const { loginWithEmailPass, loginWithGoogle, setUser, loginWithGithub } = useContext(AuthContext);
+
+  const handleLoginWithEmailPass = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    loginWithEmailPass(email, password)
+    .then(result => {
+      const user = result.user;
+      setUser(user);
+      Swal.fire({
+        title: "Success",
+        position: "center",
+        text: "Successfully Login",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    })
+
+    .catch(error => {
+      // console.log(error.message);
+      Swal.fire({
+        title: "Error!",
+        text: "Failed to login",
+        icon: "error",
+        confirmButtonText: "Okay",
+      });
+    })
+  };
 
   const handleGoogleLogin = () => {
     loginWithGoogle()
@@ -60,14 +92,14 @@ const Login = () => {
 
   return (
     <div className="hero bg-base-200 py-20">
-      <div className="lg:w-2/5 md:w-1/2 w-11/12 mx-auto flex-col">
+      <div className="lg:w-2/5 md:w-3/5 w-11/12 mx-auto flex-col">
         <div className="text-center pb-8">
-          <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">
+          <h1 className="md:text-5xl text-4xl font-bold">
             Login Now!
           </h1>
         </div>
         <div className="bg-base-100 shrink-0 shadow-lg rounded-lg">
-          <form className="card-body">
+          <form onSubmit={handleLoginWithEmailPass} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
