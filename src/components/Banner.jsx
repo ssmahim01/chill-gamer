@@ -18,7 +18,7 @@ const Banner = () => {
         autoplay={{ delay: 2000 }}
         className="w-full lg:h-96 h-72"
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div
             className="w-full h-full bg-cover bg-center p-6"
             style={{
@@ -40,7 +40,7 @@ const Banner = () => {
               </Link>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
         <SwiperSlide>
           <div

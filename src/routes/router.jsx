@@ -5,6 +5,9 @@ import AllReviews from "../pages/AllReviews";
 import AddReview from "../pages/AddReview";
 import MyReviews from "../pages/MyReviews";
 import GameWatchList from "../pages/GameWatchList";
+import PrivateRoute from "./PrivateRoute";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -21,15 +24,23 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addReview",
-                element: <AddReview></AddReview>
+                element: <PrivateRoute><AddReview></AddReview></PrivateRoute>
             },
             {
                 path: "/myReviews",
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: "/gameWatchList",
-                element: <GameWatchList></GameWatchList>
+                element: <PrivateRoute><GameWatchList></GameWatchList></PrivateRoute>
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/register",
+                element: <Register></Register>
             },
         ],
     },
