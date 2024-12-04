@@ -11,7 +11,7 @@ const Navbar = () => {
     </>
 
   return (
-    <div className="navbar border-b border-gray-300 shadow-lg *:text-white lg:px-20 px-8 py-3" style={{
+    <div className="navbar shadow-lg *:text-white lg:px-20 px-8 py-3" style={{
       backgroundImage: "url('gamer-navbar.jpg')",
       backgroundRepeat: "no-repeat",
       // backgroundPosition: "center",
@@ -19,7 +19,7 @@ const Navbar = () => {
     }}>
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn bg-fuchsia-500 border-none text-white lg:hidden mr-3 shadow-md">
+          <div tabIndex={0} role="button" className="btn bg-purple-600 border-none text-white lg:hidden mr-3 shadow-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

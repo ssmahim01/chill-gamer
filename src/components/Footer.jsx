@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer footer-center bg-base-200 p-10" style={{
-      backgroundImage: "url('10.png')",
+      backgroundImage: "url('footer-bg.png')",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center"
     }}>
