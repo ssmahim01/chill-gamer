@@ -3,22 +3,26 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-base-200">
+    <footer className="footer footer-center bg-base-200 p-10" style={{
+      backgroundImage: "url('10.png')",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center"
+    }}>
       <aside>
         <div className="flex gap-2 items-center">
           <img
-            className="w-8 h-8 rounded-xl"
+            className="w-10 h-10 rounded-xl"
             src="game-logo.webp"
             alt="Logo of Game"
           />
-          <h2 className="text-2xl font-bold">Chill Gamer</h2>
+          <h2 className="text-3xl font-bold">Chill Gamer</h2>
         </div>
-        <p className="mt-3 font-bold">
+        <p className="mt-3 text-lg font-bold">
           <span>Chill Gamer of MZ Dev. Ltd.</span>
           <br />
           <span>Providing services since 2023</span>
         </p>
-        <p className="text-gray-700 font-semibold">
+        <p className="text-gray-700 text-base font-semibold">
           Copyright © {new Date().getFullYear()} - All right reserved
         </p>
       </aside>
