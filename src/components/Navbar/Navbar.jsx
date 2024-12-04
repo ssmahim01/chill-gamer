@@ -90,11 +90,11 @@ const Navbar = () => {
         </div>
         <div className="flex gap-2 items-center">
           <img
-            className="w-12 h-12 rounded-xl"
+            className="md:w-10 w-12 md:h-10 h-12 rounded-xl"
             src="game-logo.webp"
             alt="Logo of Game"
           />
-          <h2 className="hidden md:block text-2xl font-bold">Chill Gamer</h2>
+          <h2 className="hidden md:block text-3xl font-bold">Chill Gamer</h2>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex *:gap-4">

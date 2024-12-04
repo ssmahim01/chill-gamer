@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const AddReview = () => {
   const { user } = useContext(AuthContext);
-  const { displayName, email } = user;
+  const { displayName, email, photoURL } = user;
 
   const handleAddReview = (e) => {
     e.preventDefault();
@@ -26,6 +26,7 @@ const AddReview = () => {
       genres,
       email,
       name:displayName,
+      photo:photoURL
     };
 
     fetch("http://localhost:4500/reviews", {
@@ -49,7 +50,7 @@ const AddReview = () => {
         });
       }
 
-      e.target.reset();
+      // e.target.reset();
     })
   };
 
