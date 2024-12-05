@@ -7,7 +7,6 @@ const AllReviewsCard = ({ review }) => {
     gameTitle,
     reviewDescription,
     rating,
-    publishingYear,
     name,
     photo,
   } = review;
@@ -49,7 +48,7 @@ const AllReviewsCard = ({ review }) => {
             </div>
           </div>
 
-          <Link to={`/reviewDetails/${_id}`}>
+          <Link to={`/review/${_id}`}>
             <button className="btn bg-fuchsia-600 border-none text-white text-base font-bold rounded-full block w-4/5 mx-auto mt-5 mb-3">
               Explore Details
             </button>

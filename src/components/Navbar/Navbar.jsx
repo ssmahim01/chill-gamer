@@ -9,6 +9,7 @@ import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
+  // console.log(user);
 
   const handleLogOut = () => {
     logOutUser();
@@ -83,7 +84,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-3 w-56 p-3 shadow-sm text-black text-opacity-70"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-3 w-56 p-4 shadow-sm text-black text-opacity-70 space-y-2"
           >
             {allLink}
           </ul>

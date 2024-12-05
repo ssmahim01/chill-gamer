@@ -46,7 +46,7 @@ const AddReview = () => {
           text: "Successfully Added A Review",
           icon: "success",
           showConfirmButton: false,
-          timer: 2000,
+          timer: 2500,
         });
       }
 
@@ -117,7 +117,7 @@ const AddReview = () => {
                   name="rating"
                   placeholder="Type Rating"
                   min="1"
-                  max="10"
+                  max="5"
                   className="input input-bordered text-gray-800 font-medium"
                   required
                 />
