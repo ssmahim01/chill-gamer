@@ -88,16 +88,26 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-3 w-56 p-4 shadow-sm text-black text-opacity-70 space-y-2"
           >
+            <div className="md:hidden flex flex-col gap-2 items-center">
+              <img
+                className="w-12 h-12 rounded-xl"
+                src="game-logo.webp"
+                alt="Logo of Game"
+              />
+              <h2 className="text-xl font-bold">
+                Chill Gamer
+              </h2>
+            </div>
             {allLink}
           </ul>
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="md:flex gap-2 items-center hidden">
           <img
-            className="md:w-10 w-12 md:h-10 h-12 rounded-xl"
+            className="w-10 h-10 rounded-xl"
             src="game-logo.webp"
             alt="Logo of Game"
           />
-          <h2 className="hidden md:block text-3xl font-bold">Chill Gamer</h2>
+          <h2 className="text-3xl font-bold">Chill Gamer</h2>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex *:gap-4">

@@ -73,8 +73,8 @@ const ReviewDetails = () => {
         Review Details
       </h1>
 
-      <div className="flex flex-col-reverse gap-4 border-2 border-white/50 p-4 shadow-md rounded-lg">
-        <div className="space-y-3">
+      <div className="flex flex-col-reverse gap-3 border-2 border-white/50 p-4 shadow-md rounded-lg">
+        <div className="space-y-2">
           <h2 className="md:text-4xl text-2xl text-gray-800 font-extrabold">
             Game Title: {gameTitle}
           </h2>
@@ -82,7 +82,7 @@ const ReviewDetails = () => {
           <p className="text-gray-600 font-semibold">{reviewDescription}</p>
 
           <div className="flex justify-between items-center">
-          <p className="md:text-2xl text-xl text-gray-800 font-bold">
+          <p className="text-xl text-gray-800 font-bold">
             Rating: <span className="text-gray-600">{rating}/5</span>
           </p>
 
@@ -99,14 +99,14 @@ const ReviewDetails = () => {
             />
           </div>
 
-          <p className="md:text-2xl text-xl text-gray-800 font-bold">
+          <p className="text-xl text-gray-800 font-bold">
             Genre: <span className="text-gray-600">{genre}</span>
           </p>
-          <p className="md:text-2xl text-xl text-gray-800 font-bold">
+          <p className="text-xl text-gray-800 font-bold">
             Reviewer's Name:{" "}
             <span className="text-gray-600">{reviewerName}</span>
           </p>
-          <p className="md:text-2xl text-xl text-gray-800 font-bold">
+          <p className="text-xl text-gray-800 font-bold">
             Email: <span className="text-gray-600">{reviewerEmail}</span>
           </p>
 
@@ -136,7 +136,7 @@ const ReviewDetails = () => {
         </div>
       </div>
 
-         <Link to="/">
+         <Link to="/" className="flex md:justify-start justify-center items-center">
          <button className="mt-10 btn rounded-none bg-violet-600 text-white font-bold"><IoArrowBackCircleSharp className="text-2xl"/> Back To Home</button>
          </Link>
     </div>

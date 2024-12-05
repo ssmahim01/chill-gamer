@@ -10,6 +10,7 @@ const AddReview = () => {
   const handleAddReview = (e) => {
     e.preventDefault();
 
+    // const userUid = user?.uid;
     const gameCover = e.target.cover.value;
     const gameTitle = e.target.title.value;
     const reviewDescription = e.target.description.value;
@@ -18,6 +19,7 @@ const AddReview = () => {
     const genres = e.target.genres.value;
 
     const addInfo = {
+      // userUid,
       gameCover,
       gameTitle,
       reviewDescription,
