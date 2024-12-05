@@ -1,16 +1,14 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     const location = useLocation();
 
     if(loading){
-        <div className="flex justify-center items-center pt-36">
-            <p className="text-3xl text-center font-bold">loading...</p>
-        </div>
-        return;
+        return <Loading></Loading>
     };
 
     if(user && user?.email){

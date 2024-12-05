@@ -3,15 +3,13 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import Loading from "../components/Loading";
 
 const MainLayout = () => {
     const {loading} = useContext(AuthContext);
     
     if(loading){
-        <div className="flex justify-center items-center pt-36">
-            <p className="text-3xl text-center font-bold">loading...</p>
-        </div>
-        return;
+        return <Loading></Loading>
     };
 
     return (
