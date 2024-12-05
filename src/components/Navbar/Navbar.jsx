@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
@@ -9,6 +9,7 @@ import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   // console.log(user);
 
   const handleLogOut = () => {
@@ -21,6 +22,7 @@ const Navbar = () => {
       showConfirmButton: false,
       timer: 2000,
     });
+    navigate("/");
   };
 
   const allLink = (

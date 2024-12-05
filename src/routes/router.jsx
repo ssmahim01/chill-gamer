@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Home></Home>,
             },
             {
                 path: "/allReviews",
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/review/:id",
-                loader: ({params}) => fetch(`http://localhost:4500/reviews/${params.id}`),
+                loader: ({params}) => fetch(`https://chill-gamer-server-two.vercel.app/reviews/${params.id}`),
                 element: <ReviewDetails></ReviewDetails>
             },
             {

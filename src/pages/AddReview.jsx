@@ -29,7 +29,7 @@ const AddReview = () => {
       photo:photoURL
     };
 
-    fetch("http://localhost:4500/reviews", {
+    fetch("https://chill-gamer-server-two.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json"

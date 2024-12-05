@@ -1,7 +1,9 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import ReactStars from "react-rating-stars-component";
 import Swal from "sweetalert2";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 const ReviewDetails = () => {
   const { user, loading } = useContext(AuthContext);
@@ -43,7 +45,7 @@ const ReviewDetails = () => {
       userEmail,
     };
 
-    fetch("http://localhost:4500/watchLists", {
+    fetch("https://chill-gamer-server-two.vercel.app/watchLists", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -52,22 +54,22 @@ const ReviewDetails = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        if(result.insertedId){
-            Swal.fire({
-                title: "Success",
-                position: "center",
-                text: "Successfully Added In The WatchList",
-                icon: "success",
-                showConfirmButton: false,
-                timer: 2500,
-              });
+        if (result.insertedId) {
+          Swal.fire({
+            title: "Success",
+            position: "center",
+            text: "Successfully Added In The WatchList",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2500,
+          });
         }
       });
   };
 
   return (
-    <div className="my-20 lg:w-3/4 md:w-11/12 w-full mx-auto">
-      <h1 className="text-center md:text-5xl text-3xl text-gray-900 font-bold pb-9">
+    <div className="my-16 lg:w-3/4 md:w-11/12 w-full mx-auto">
+      <h1 className="text-center md:text-5xl text-3xl text-gray-900 font-bold pb-5">
         Review Details
       </h1>
 
@@ -79,9 +81,24 @@ const ReviewDetails = () => {
 
           <p className="text-gray-600 font-semibold">{reviewDescription}</p>
 
+          <div className="flex justify-between items-center">
           <p className="md:text-2xl text-xl text-gray-800 font-bold">
             Rating: <span className="text-gray-600">{rating}/5</span>
           </p>
+
+          <ReactStars
+              count={5}
+              size={32}
+              isHalf={true}
+              edit={false}
+              value={rating}
+              emptyIcon={<i className="far fa-star"></i>}
+              halfIcon={<i className="fa fa-star-half-alt"></i>}
+              fullIcon={<i className="fa fa-star"></i>}
+              activeColor="#ffd700"
+            />
+          </div>
+
           <p className="md:text-2xl text-xl text-gray-800 font-bold">
             Genre: <span className="text-gray-600">{genre}</span>
           </p>
@@ -107,6 +124,7 @@ const ReviewDetails = () => {
               </button>
             )}
           </div>
+
         </div>
 
         <div className="w-full lg:h-96 md:h-80 h-72">
@@ -117,6 +135,10 @@ const ReviewDetails = () => {
           />
         </div>
       </div>
+
+         <Link to="/">
+         <button className="mt-10 btn rounded-none bg-violet-600 text-white font-bold"><IoArrowBackCircleSharp className="text-2xl"/> Back To Home</button>
+         </Link>
     </div>
   );
 };
