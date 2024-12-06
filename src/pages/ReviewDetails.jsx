@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import ReactStars from "react-rating-stars-component";
 import Swal from "sweetalert2";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
+import Loading from "../components/Loading";
 
 const ReviewDetails = () => {
   const { user, loading } = useContext(AuthContext);
@@ -21,11 +22,8 @@ const ReviewDetails = () => {
   } = reviewData;
 
   if (loading) {
-    <div className="flex justify-center items-center pt-36">
-      <p className="text-3xl text-center font-bold">loading...</p>
-    </div>;
-    return;
-  }
+    return <Loading></Loading>
+  };
 
   const handleAddWatchList = (event) => {
     event.preventDefault();

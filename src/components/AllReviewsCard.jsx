@@ -41,7 +41,7 @@ const AllReviewsCard = ({ review }) => {
         </div>
 
         <Link to={`/review/${_id}`}>
-          <button className="btn bg-fuchsia-600 border-none text-white text-base font-bold rounded-full block w-4/5 mx-auto mt-4 mb-3">
+          <button className="btn bg-fuchsia-600 border-none text-white text-base font-bold rounded-full block lg:w-4/5 w-full mx-auto mt-4 mb-3">
             Explore Details
           </button>
         </Link>

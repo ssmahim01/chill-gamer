@@ -56,6 +56,7 @@ const MyReviews = () => {
   // console.log(email);
   return (
     <div className="lg:w-3/4 w-11/12 mx-auto my-12">
+       <h2 className="text-center lg:text-5xl md:text-4xl text-3xl font-bold mb-8">My Reviews</h2>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
@@ -111,7 +112,7 @@ const MyReviews = () => {
           ) : (
             <>
             <th></th>
-            <p className="lg:text-2xl md:text-lg text-rose-600 font-bold text-end mt-3">No Any Review</p>
+            <p className="lg:text-2xl md:text-lg text-rose-600 font-bold text-end mt-3">Reviews Not Found</p>
             </>
           )}
         </table>
