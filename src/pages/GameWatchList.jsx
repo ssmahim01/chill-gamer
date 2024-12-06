@@ -5,8 +5,9 @@ import Swal from "sweetalert2";
 
 const GameWatchList = () => {
   const { user, loading } = useContext(AuthContext);
-  // const { email } = user;
+  const { email:userEmail } = user;
   const [myWatchLists, setMyWatchLists] = useState([]);
+  // console.log(myWatchLists);
 
   if(loading){
     return <Loading></Loading>
@@ -46,12 +47,12 @@ const GameWatchList = () => {
   };
 
   useEffect(() => {
-    fetch(`https://chill-gamer-server-two.vercel.app/watchLists?email=${myWatchLists?.userEmail}`)
+    fetch(`https://chill-gamer-server-two.vercel.app/watchLists?email=${userEmail}`)
       .then((response) => response.json())
       .then((data) => {
         setMyWatchLists(data);
       });
-  }, [myWatchLists?.userEmail]);
+  }, [userEmail]);
 
   return (
     <div className="lg:w-3/4 w-11/12 mx-auto my-12">
@@ -63,6 +64,8 @@ const GameWatchList = () => {
               <th>Serial.</th>
               <th>Game Cover</th>
               <th>Game Title</th>
+              <th>Rating</th>
+              <th>Review Description</th>
               <th>Reviewer Name</th>
               <th>Genre</th>
               <th>Action</th>
@@ -82,6 +85,12 @@ const GameWatchList = () => {
                   </td>
                   <td className="text-gray-800 font-semibold">
                     {watchList?.gameTitle}
+                  </td>
+                  <td className="text-gray-800 font-semibold">
+                    {watchList?.rating}/5
+                  </td>
+                  <td className="text-gray-800 font-semibold">
+                    {watchList?.reviewDescription.slice(0, 30)}...
                   </td>
                   <td className="text-gray-800 font-semibold">
                     {watchList?.reviewerName}

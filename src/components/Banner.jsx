@@ -18,30 +18,6 @@ const Banner = () => {
         autoplay={{ delay: 3000 }}
         className="w-full lg:h-96 h-72"
       >
-        {/* <SwiperSlide>
-          <div
-            className="w-full h-full bg-cover bg-center p-6"
-            style={{
-              backgroundImage:
-                "url('pro-video-game-r-losing-space-shooter-competition-while-wearing-virtual-reality-headset.jpg')",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div className="lg:w-2/4 md:w-3/5 w-11/12 mx-auto flex flex-col justify-center items-center gap-3 lg:py-20 py-7">
-              <h2 className="md:text-4xl text-amber-400 text-3xl font-extrabold">Pro Video Gamer</h2>
-              <p className="text-white/70 font-bold text-center">
-                The gamer played a space shooter game. She was joined a
-                competition. But, unfortunately did not won the game.
-              </p>
-              <Link to="/addReview">
-                <button className="btn btn-info text-white font-bold text-lg px-5 mt-4">
-                  Add Review
-                </button>
-              </Link>
-            </div>
-          </div>
-        </SwiperSlide> */}
-
         <SwiperSlide>
           <div
             className="w-full h-full bg-cover bg-center p-6"
