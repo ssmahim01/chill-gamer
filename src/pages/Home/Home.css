@@ -1,0 +1,11 @@
+.light-theme{
+    --bg-clr: #f1f1f1;
+}
+
+.dark-theme{
+    --bg-clr: #111b20;
+}
+
+body{
+    background-color: var(--bg-clr);
+}

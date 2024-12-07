@@ -116,11 +116,11 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && user?.email ? (
           <div className="flex gap-3 items-center">
-            <Tooltip anchorSelect=".my-anchor-element" place="left">
+            <Tooltip anchorSelect=".display-name" place="left">
               {user?.displayName}
             </Tooltip>
             <img
-              className="my-anchor-element w-14 h-14 rounded-full border-4 border-amber-300"
+              className="display-name w-14 h-14 rounded-full border-4 border-amber-300"
               src={user?.photoURL}
               alt={user?.displayName}
             />

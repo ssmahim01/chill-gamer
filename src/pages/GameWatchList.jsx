@@ -67,6 +67,7 @@ const GameWatchList = () => {
               <th>Rating</th>
               <th>Review Description</th>
               <th>Reviewer Name</th>
+              <th>Reviewer Email</th>
               <th>Genre</th>
               <th>Action</th>
             </tr>
@@ -96,6 +97,9 @@ const GameWatchList = () => {
                     {watchList?.reviewerName}
                   </td>
                   <td className="text-gray-800 font-semibold">
+                    {watchList?.reviewerEmail}
+                  </td>
+                  <td className="text-gray-800 font-semibold">
                     {watchList?.genre}
                   </td>
 
@@ -113,7 +117,7 @@ const GameWatchList = () => {
           ) : (
             <>
             <th></th>
-            <p className="lg:text-2xl md:text-lg text-rose-600 font-bold text-end mt-3">Not Found WatchLists</p>
+            <p className="lg:text-2xl md:text-lg text-rose-600 font-bold text-end mt-3">Not Found WatchList</p>
             </>
           )}
         </table>

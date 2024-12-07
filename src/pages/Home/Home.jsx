@@ -1,25 +1,21 @@
 import { useEffect, useState } from "react";
-import Banner from "../components/Banner";
-import HighestRatedGames from "../components/HighestRatedGames";
-import MindsetSection from "../components/mindsetSection";
+import Banner from "../../components/Banner";
+import HighestRatedGames from "../../components/HighestRatedGames";
+import MindsetSection from "../../components/mindsetSection";
 import { Typewriter } from "react-simple-typewriter";
-import UsersReview from "../components/UsersReview";
+import UsersReview from "../../components/UsersReview";
+import "./Home.css";
 
 const Home = () => {
-  let [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  let [theme, setTheme] = useState("light-theme");
 
-  const handleThemeToggle = (e) => {
-    e.preventDefault();
-    const newTheme =
-      theme === "light"
-        ? (document.body.style.backgroundColor = "#424242")
-        : (document.body.style.backgroundColor = "#f2f2f2");
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
+  const handleThemeToggle = () => {
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
+    // localStorage.setItem("theme", newTheme);
   };
 
   useEffect(() => {
-    document.documentElement.className = theme;
+    document.body.className = theme;
   }, [theme]);
 
   return (
@@ -47,9 +43,7 @@ const Home = () => {
 
           <label
             className="swap swap-rotate"
-            onClick={() => {
-              setTheme(handleThemeToggle(!theme));
-            }}
+            onClick={() => handleThemeToggle()}
           >
             <input
               type="checkbox"
