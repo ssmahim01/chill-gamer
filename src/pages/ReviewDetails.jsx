@@ -5,6 +5,7 @@ import ReactStars from "react-rating-stars-component";
 import Swal from "sweetalert2";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Loading from "../components/Loading";
+import { RiLoginCircleFill } from "react-icons/ri";
 
 const ReviewDetails = () => {
   const { user, loading } = useContext(AuthContext);
@@ -110,9 +111,11 @@ const ReviewDetails = () => {
 
           <div className="pt-3 pb-2">
             {!user ? (
-              <p className="md:text-2xl text-lg text-rose-500 font-bold md:text-left text-center">
-                Login to Add to WatchList
+              <Link to="/login">
+              <p className="md:text-2xl text-lg text-info font-bold md:justify-start justify-center flex gap-1 items-center">
+                Login to Add to WatchList <RiLoginCircleFill className="text-3xl text-violet-600" />
               </p>
+              </Link>
             ) : (
               <button
                 onClick={handleAddWatchList}
