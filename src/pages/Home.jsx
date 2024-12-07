@@ -26,7 +26,7 @@ const Home = () => {
 
       <section className="my-14 w-11/12 mx-auto">
         <div className="flex justify-between items-center mb-10">
-          <h2 className="text-gray-900 dark:text-white md:text-4xl text-3xl font-extrabold">
+          <h2 className="text-gray-900 md:text-4xl text-xl font-extrabold">
             Game Mindset{" "}
             <span className="text-secondary font-bold">
               <Typewriter
@@ -50,7 +50,7 @@ const Home = () => {
               value="synthwave"
             />
                 <svg
-                  className="swap-on h-10 w-10 fill-current"
+                  className="swap-on md:h-10 h-8 md:w-10 w-8 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -58,7 +58,7 @@ const Home = () => {
                 </svg>
 
                 <svg
-                  className="swap-off h-10 w-10 fill-current"
+                  className="swap-off md:h-10 h-8 md:w-10 w-8 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >

@@ -36,8 +36,8 @@ const AllReviews = () => {
 
   return (
     <div className="lg:w-4/5 md:w-11/12 w-full mx-auto my-14">
-      <div className="flex justify-between items-center mb-10">
-        <h2 className="md:text-4xl text-3xl font-extrabold">
+      <div className="flex md:flex-row flex-col md:justify-between justify-center items-center md:gap-0 gap-2 md:mb-10 mb-7">
+        <h2 className="md:text-4xl text-2xl font-extrabold">
           All Reviews{" "}
           <span className="text-primary font-bold">
             <Typewriter

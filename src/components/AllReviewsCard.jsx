@@ -23,7 +23,7 @@ const AllReviewsCard = ({ review }) => {
       </figure>
 
       <div className="space-y-2">
-        <h2 className="text-3xl text-center font-bold">{gameTitle}</h2>
+        <h2 className="text-xl text-center font-bold">{gameTitle}</h2>
 
         <p className="text-gray-800 text-lg font-bold text-center">
           Rating: <span className="text-gray-600">{rating}/5</span>
@@ -35,7 +35,7 @@ const AllReviewsCard = ({ review }) => {
 
         <div>
           <div className="flex justify-between items-center">
-            <h3 className="text-lg text-gray-900 font-bold">Reviewer: <span className="text-gray-700">{name}</span></h3>
+            <h3 className="text-lg text-gray-900 font-bold">By: <span className="text-gray-700">{name}</span></h3>
             <img className="w-12 h-12 border-4 border-amber-400 rounded-full" src={photo} alt={name} />
           </div>
         </div>
