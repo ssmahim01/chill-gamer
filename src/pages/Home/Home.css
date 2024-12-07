@@ -1,11 +1,23 @@
-.light-theme{
-    --bg-clr: #f1f1f1;
+.light-theme {
+  --bg-clr: #fff;
+  --text-color-btn: #333;
 }
 
-.dark-theme{
-    --bg-clr: #111b20;
+.dark-theme {
+  --bg-clr: #111b20;
+  --main-heading: #f2f2f2;
+  --text-color-btn: #f4f4f4;
+}
+
+h1, h2, h3{
+    color: var(--main-heading);
 }
 
 body{
+    background-color: var(--bg-clr);
+}
+
+.toggle-btn{
+    color: var(--text-color-btn);
     background-color: var(--bg-clr);
 }

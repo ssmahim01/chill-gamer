@@ -68,7 +68,7 @@ const ReviewDetails = () => {
 
   return (
     <div className="my-16 lg:w-3/4 md:w-11/12 w-full mx-auto">
-      <h1 className="text-center md:text-5xl text-3xl text-gray-900 font-bold pb-5">
+      <h1 className="text-center md:text-5xl text-3xl font-bold pb-5">
         Review Details
       </h1>
 

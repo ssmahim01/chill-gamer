@@ -15,9 +15,9 @@ const Footer = () => {
             src="game-logo.webp"
             alt="Logo of Game"
           />
-          <h2 className="text-3xl font-bold">Chill Gamer</h2>
+          <h2 className="text-3xl text-black font-bold">Chill Gamer</h2>
         </div>
-        <p className="mt-3 md:text-lg text-base font-bold">
+        <p className="mt-3 md:text-lg text-gray-800 font-bold">
           <span>Chill Gamer of MZ Dev. Ltd.</span>
           <br />
           <span>Providing services since 2023</span>
