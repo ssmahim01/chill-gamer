@@ -59,6 +59,12 @@ const AllReviews = () => {
           </span>
         </h2>
 
+        <div>
+          <select>
+            <option value="Filter By"></option>
+          </select>
+        </div>
+
         <div className="dropdown">
           <div
             tabIndex={0}

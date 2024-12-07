@@ -96,7 +96,7 @@ const Login = () => {
   };
 
   return (
-    <div className="hero bg-base-200 py-20">
+    <div className="hero py-20">
       <div className="lg:w-2/5 md:w-3/5 w-11/12 mx-auto flex-col">
         <div className="text-center pb-8">
           <h1 className="md:text-5xl text-4xl font-bold">

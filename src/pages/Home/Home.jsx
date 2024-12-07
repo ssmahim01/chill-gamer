@@ -51,7 +51,7 @@ const Home = () => {
           </h2>
 
           
-          <button className="btn btn-outline border-none toggle-btn" onClick={() => handleThemeToggle()}>
+          <button className="btn btn-outline shadow-md border-none toggle-btn" onClick={() => handleThemeToggle()}>
             {theme === "dark-theme" ? (
               <span className="text-3xl" role="img" aria-label="Light Icon"><FaRegLightbulb /></span>
             ) : (

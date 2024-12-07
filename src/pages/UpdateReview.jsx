@@ -53,7 +53,7 @@ const UpdateReview = () => {
   };
 
   return (
-    <div className="hero bg-base-200 py-20">
+    <div className="hero py-20">
       <div className="lg:w-3/5 w-11/12 mx-auto flex-col">
         <div className="text-center pb-8">
           <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">
