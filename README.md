@@ -9,7 +9,7 @@
 
 <li><b>Interactive User Interface: A clean and intuitive design for easy navigation and usability.</b></li>
 
-<li><b>Server Side Integration: Efficient backend implementation to fetch and filter reviews dynamically using APIs.</b></li>
+<li><b>Fetch: Used Fetch for receive data from the server side and display different data in different routes such as Home, All Reviews, Review Details, My Reviews and Game WatchList etc.</b></li>
 
 <li><b>Authentication: Users login and register through the firebase. If any user login with google, github or register with their info, then an user info will saved in auth state. Then user can easily login by their email and password.</b></li>
 
