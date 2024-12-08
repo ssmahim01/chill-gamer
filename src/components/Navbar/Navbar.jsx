@@ -94,7 +94,7 @@ const Navbar = () => {
                 src="game-logo.webp"
                 alt="Logo of Game"
               />
-              <h2 className="text-xl font-bold">
+              <h2 className="text-xl text-gray-900 font-bold">
                 Chill Gamer
               </h2>
             </div>

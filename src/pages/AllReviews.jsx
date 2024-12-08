@@ -4,6 +4,9 @@ import { Typewriter } from "react-simple-typewriter";
 
 const AllReviews = () => {
   const [reviews, setReviews] = useState([]);
+  const [filteredReviews, setFilteredReviews] = useState([]);
+  const [genresValue, setGenresValue] = useState("");
+  const [genres, setGenres] = useState([]);
   const [sortItems, setSortItems] = useState("");
 
   const handleSorted = (type) => {
@@ -11,28 +14,45 @@ const AllReviews = () => {
 
     let sortBy = "";
 
-    if(type == "Rating"){
+    if (type == "Rating") {
       sortBy = "rating";
-    };
+    }
 
-    if(type == "Publish Year"){
+    if (type == "Publish Year") {
       sortBy = "publishingYear";
-    };
+    }
 
-    fetch(`http://localhost:4500/reviews?sortBy=${sortBy}`)
-        .then((response) => response.json())
-        .then((data) => {
-          setReviews(data);
-        });
+    fetch(`https://chill-gamer-server-two.vercel.app/reviews?sortBy=${sortBy}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setFilteredReviews(data);
+      });
+  };
+
+  const handleGenre = (event) => {
+    event.preventDefault();
+    const genre = event.target.value;
+    setGenresValue(genre);
+
+    const filter = genre ? reviews.filter(singleReview => singleReview?.genres === genre) : reviews;
+
+    setFilteredReviews(filter);
   };
 
   useEffect(() => {
-    fetch("http://localhost:4500/reviews")
+    fetch("https://chill-gamer-server-two.vercel.app/reviews")
       .then((response) => response.json())
       .then((data) => {
         setReviews(data);
+        setFilteredReviews(data);
       });
-  }, []);
+
+      fetch(`https://chill-gamer-server-two.vercel.app/genres`)
+      .then((response) => response.json())
+      .then((data) => {
+        setGenres(data);
+      });
+    }, []);
 
   return (
     <div className="lg:w-4/5 md:w-11/12 w-full mx-auto my-14">
@@ -59,41 +79,43 @@ const AllReviews = () => {
           </span>
         </h2>
 
-        <div>
-          <select>
-            <option value="Filter By"></option>
+        <div className="flex gap-3 items-center justify-end">
+          <select className="input text-gray-800 font-bold *:font-bold bg-base-300" value={genresValue} onChange={handleGenre}>
+            <option value="">All Genres</option>
+            {genres.map(genre => <option key={genre._id} value={genre?.genres}>{genre?.genres}</option>)}
           </select>
-        </div>
 
-        <div className="dropdown">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn bg-cyan-600 m-1 text-white font-bold px-6"
-          >
-            {sortItems ? `${sortItems}`:"Sort By"}
+          <div className="dropdown">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn bg-cyan-600 m-1 text-white font-bold px-6"
+            >
+              {sortItems ? `${sortItems}` : "Sort By"}
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content right-3 menu bg-base-200 rounded-box z-[5] w-56 p-4 shadow-md space-y-2 *:font-bold"
+            >
+              <li
+                className="cursor-pointer hover:btn-active p-2"
+                onClick={() => handleSorted("Rating")}
+              >
+                Rating
+              </li>
+              <li
+                className="cursor-pointer hover:btn-active p-2"
+                onClick={() => handleSorted("Publish Year")}
+              >
+                Publish Year
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content menu bg-base-200 rounded-box z-[1] w-56 p-4 shadow-md space-y-2 *:font-bold"
-          >
-            <li
-              className="cursor-pointer hover:btn-active p-2"
-              onClick={() => handleSorted('Rating')}
-            >
-              Rating
-            </li>
-            <li
-              className="cursor-pointer hover:btn-active p-2"
-              onClick={() => handleSorted('Publish Year')}
-            >
-              Publish Year
-            </li>
-          </ul>
         </div>
       </div>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {reviews.map((review) => (
+      <section className="md:w-full w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+        filteredReviews.map((review) => (
           <AllReviewsCard key={review._id} review={review}></AllReviewsCard>
         ))}
       </section>

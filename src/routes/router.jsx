@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             {
                 path: "/updateReview/:id",
                 element: <UpdateReview></UpdateReview>,
-                loader: ({params}) => fetch(`http://localhost:4500/reviews/${params.id}`)
+                loader: ({params}) => fetch(`https://chill-gamer-server-two.vercel.app/reviews/${params.id}`)
             },
             {
                 path: "/login",

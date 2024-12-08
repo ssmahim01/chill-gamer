@@ -84,22 +84,22 @@ const GameWatchList = () => {
                       alt={watchList?.gameTitle}
                     />
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {watchList?.gameTitle}
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {watchList?.rating}/5
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {watchList?.reviewDescription.slice(0, 30)}...
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {watchList?.reviewerName}
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {watchList?.reviewerEmail}
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {watchList?.genre}
                   </td>
 

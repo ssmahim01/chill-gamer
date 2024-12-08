@@ -29,7 +29,7 @@ const UpdateReview = () => {
       photo
     };
 
-    fetch(`http://localhost:4500/reviews/${review?._id}`, {
+    fetch(`https://chill-gamer-server-two.vercel.app/reviews/${review?._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

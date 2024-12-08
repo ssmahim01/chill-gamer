@@ -24,7 +24,7 @@ const MyReviews = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4500/reviews/${id}`, {
+        fetch(`https://chill-gamer-server-two.vercel.app/reviews/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,7 +47,7 @@ const MyReviews = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:4500/reviews?email=${email}`)
+    fetch(`https://chill-gamer-server-two.vercel.app/reviews?email=${email}`)
       .then((response) => response.json())
       .then((data) => {
         setMyReviews(data);
@@ -82,13 +82,13 @@ const MyReviews = () => {
                       alt={review?.gameTitle}
                     />
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {review?.gameTitle}
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {review?.publishingYear}
                   </td>
-                  <td className="text-gray-800 font-semibold">
+                  <td className="font-semibold">
                     {review?.genres}
                   </td>
 

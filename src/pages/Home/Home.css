@@ -1,16 +1,26 @@
-.light-theme {
+.theme-2 {
+  --bg-clr: #111b20;
+  --main-heading: #f2f2f2;
+  --text-color-btn: #f4f4f4;
+  --paragraph-tag: rgb(132, 132, 132);
+  --table-color: rgb(212, 212, 212);
+}
+
+.theme-1{
   --bg-clr: #fff;
   --text-color-btn: #333;
 }
 
-.dark-theme {
-  --bg-clr: #111b20;
-  --main-heading: #f2f2f2;
-  --text-color-btn: #f4f4f4;
-}
-
 h1, h2, h3{
     color: var(--main-heading);
+}
+
+p{
+  color: var(--paragraph-tag);
+}
+
+table{
+  color: var(--table-color);
 }
 
 body{
@@ -19,5 +29,4 @@ body{
 
 .toggle-btn{
     color: var(--text-color-btn);
-    background-color: var(--bg-clr);
 }
