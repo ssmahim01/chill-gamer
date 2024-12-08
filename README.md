@@ -1,6 +1,6 @@
 # Website Name
 
-<h2><b>Chill Gamer</b></h2>
+<b>Chill Gamer</b>
 
 # Live URL
 
