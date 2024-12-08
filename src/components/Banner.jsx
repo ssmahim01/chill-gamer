@@ -16,7 +16,7 @@ const Banner = () => {
         slidesPerView={1}
         // pagination={{clickable:true}}
         autoplay={{ delay: 3000 }}
-        className="w-full lg:h-96 h-72"
+        className="w-full lg:h-96 h-80"
       >
         <SwiperSlide>
           <div

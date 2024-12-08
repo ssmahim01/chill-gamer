@@ -28,7 +28,7 @@ const HighestRatedGames = () => {
             </figure>
 
             <div className="px-4 py-2">
-              <h2 className="text-3xl font-bold">{game?.gameTitle}</h2>
+              <h2 className="text-3xl text-gray-800 font-bold">{game?.gameTitle}</h2>
 
               <div className="flex justify-between items-center">
                 <p className="text-gray-800 text-lg font-bold">

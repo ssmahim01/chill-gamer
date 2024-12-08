@@ -23,7 +23,7 @@ const AllReviewsCard = ({ review }) => {
       </figure>
 
       <div className="space-y-2">
-        <h2 className="text-xl text-center font-bold">{gameTitle}</h2>
+        <h2 className="text-xl text-gray-800 text-center font-bold">{gameTitle}</h2>
 
         <p className="text-gray-800 text-lg font-bold text-center">
           Rating: <span className="text-gray-600">{rating}/5</span>

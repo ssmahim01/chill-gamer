@@ -1,4 +1,4 @@
-# Chill Gamer
+# Chill Gamer Application
 
 # Live URL
 

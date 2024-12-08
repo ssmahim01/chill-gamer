@@ -55,7 +55,7 @@ const GameWatchList = () => {
   }, [userEmail]);
 
   return (
-    <div className="lg:w-3/4 w-11/12 mx-auto my-12">
+    <div className="w-11/12 mx-auto my-12">
       <h2 className="text-center lg:text-5xl md:text-4xl text-3xl font-bold mb-8">Game Watch List</h2>
       <div className="overflow-x-auto">
         <table className="table">
@@ -99,6 +99,7 @@ const GameWatchList = () => {
                   <td className="font-semibold">
                     {watchList?.reviewerEmail}
                   </td>
+                  
                   <td className="font-semibold">
                     {watchList?.genre}
                   </td>

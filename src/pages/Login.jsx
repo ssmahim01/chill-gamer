@@ -4,10 +4,9 @@ import { SiGithub } from "react-icons/si";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
-import { toast } from "react-toastify";
 
 const Login = () => {
-  const { loginWithEmailPass, loginWithGoogle, setUser, loginWithGithub } = useContext(AuthContext);
+  const { loginWithEmailPass, loginWithGoogle, setUser } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -71,29 +70,29 @@ const Login = () => {
       });
   };
 
-  const handleGithubLogin = () => {
-    loginWithGithub()
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-        Swal.fire({
-          title: "Success",
-          position: "center",
-          text: "Github Login is Successful",
-          icon: "success",
-          showConfirmButton: false,
-          timer: 2000,
-        });
-        navigate(location?.state ? location.state : "/");
-      })
-      .catch((error) => {
-        // console.log(error.message);
+  // const handleGithubLogin = () => {
+  //   loginWithGithub()
+  //     .then((result) => {
+  //       const user = result.user;
+  //       setUser(user);
+  //       Swal.fire({
+  //         title: "Success",
+  //         position: "center",
+  //         text: "Github Login is Successful",
+  //         icon: "success",
+  //         showConfirmButton: false,
+  //         timer: 2000,
+  //       });
+  //       navigate(location?.state ? location.state : "/");
+  //     })
+  //     .catch((error) => {
+  //       // console.log(error.message);
 
-        toast.error("Failed to github login", {
-          position: "top-center"
-      });
-      });
-  };
+  //       toast.error("Failed to github login", {
+  //         position: "top-center"
+  //     });
+  //     });
+  // };
 
   return (
     <div className="hero py-20">
@@ -128,14 +127,6 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="label justify-end">
-                <a
-                  href="#"
-                  className="label-text-alt font-bold link link-hover"
-                >
-                  Forgot password?
-                </a>
-              </label>
             </div>
             <div className="form-control mt-6">
               <button className="btn bg-violet-600 border-none text-lg text-white font-bold">
@@ -163,12 +154,12 @@ const Login = () => {
                 Login With Google <FcGoogle className="text-xl" />
               </button>
 
-              <button
+              {/* <button
                 onClick={handleGithubLogin}
                 className="btn btn-outline border border-gray-300 rounded-full shadow-md font-bold"
               >
                 Login With GitHub <SiGithub className="text-xl" />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

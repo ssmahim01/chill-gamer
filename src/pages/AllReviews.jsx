@@ -56,7 +56,7 @@ const AllReviews = () => {
 
   return (
     <div className="lg:w-4/5 md:w-11/12 w-full mx-auto my-14">
-      <div className="flex md:flex-row flex-col md:justify-between justify-center items-center md:gap-0 gap-2 md:mb-10 mb-7">
+      <div className="flex lg:flex-row flex-col lg:justify-between justify-center items-center lg:gap-0 gap-2 lg:mb-10 mb-7">
         <h2 className="md:text-4xl text-2xl font-extrabold">
           All Reviews{" "}
           <span className="text-primary font-bold">
@@ -79,11 +79,14 @@ const AllReviews = () => {
           </span>
         </h2>
 
-        <div className="flex gap-3 items-center justify-end">
-          <select className="input text-gray-800 font-bold *:font-bold bg-base-300" value={genresValue} onChange={handleGenre}>
+        <div className="flex lg:flex-row flex-col gap-5 items-center lg:justify-end justify-center">
+         <div className="flex gap-2 items-center">
+          <p className="font-bold">Filter By Genres:</p>
+          <select className="input input-bordered cursor-pointer bg-base-300 shadow-md text-gray-800 font-bold *:font-bold" value={genresValue} onChange={handleGenre}>
             <option value="">All Genres</option>
             {genres.map(genre => <option key={genre._id} value={genre?.genres}>{genre?.genres}</option>)}
           </select>
+         </div>
 
           <div className="dropdown">
             <div
@@ -95,7 +98,7 @@ const AllReviews = () => {
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content right-3 menu bg-base-200 rounded-box z-[5] w-56 p-4 shadow-md space-y-2 *:font-bold"
+              className="dropdown-content right-2 menu bg-base-200 rounded-box z-[5] w-56 p-4 shadow-md space-y-2 *:font-bold"
             >
               <li
                 className="cursor-pointer hover:btn-active p-2"

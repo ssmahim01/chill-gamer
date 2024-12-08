@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home.jsx";
-import AllReviews from "../pages/AllReviews";
+import AllReviews from "../pages/AllReviews.jsx";
 import AddReview from "../pages/AddReview";
 import MyReviews from "../pages/MyReviews";
 import GameWatchList from "../pages/GameWatchList";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
                 element: <Home></Home>,
             },
             {
-                path: "/allReviews",
+                path: "/reviews",
                 element: <AllReviews></AllReviews>
             },
             {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
-                path: "/gameWatchList",
+                path: "/myWatchlist",
                 element: <PrivateRoute><GameWatchList></GameWatchList></PrivateRoute>
             },
             {

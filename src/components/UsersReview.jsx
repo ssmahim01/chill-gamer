@@ -7,7 +7,7 @@ const UsersReview = () => {
             <h2 className="lg:text-5xl text-2xl text-neutral font-extrabold">Reviews for Inspiration</h2>
             <p className="text-gray-600 lg:text-base text-sm font-medium">Suppose, Review is the one source of inspiration. Users can share about of games in this web. A review includes Title, Description, photo URL and anything else.</p>
             
-            <Link to="/allReviews"><button className="mt-6 btn block md:mx-0 mx-auto btn-warning text-white font-bold rounded-full px-6">View All Reviews</button></Link>
+            <Link to="/reviews"><button className="mt-6 btn block md:mx-0 mx-auto btn-warning text-white font-bold rounded-full px-6">View All Reviews</button></Link>
             </div>
 
             <figure className="md:w-1/2 lg:h-96 md:h-60">

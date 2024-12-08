@@ -30,7 +30,7 @@ const Navbar = () => {
       <NavLink to="/">
         <span className="font-bold">Home</span>
       </NavLink>
-      <NavLink to="/allReviews">
+      <NavLink to="/reviews">
         <span className="font-bold">All Reviews</span>
       </NavLink>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             <span className="font-bold">My Reviews</span>
           </NavLink>
 
-          <NavLink to="/gameWatchList">
+          <NavLink to="/myWatchlist">
             <span className="font-bold">Game WatchList</span>
           </NavLink>
         </>
@@ -120,7 +120,7 @@ const Navbar = () => {
               {user?.displayName}
             </Tooltip>
             <img
-              className="display-name w-14 h-14 rounded-full border-4 border-amber-300"
+              className="display-name cursor-pointer w-14 h-14 rounded-full border-4 border-amber-300"
               src={user?.photoURL}
               alt={user?.displayName}
             />

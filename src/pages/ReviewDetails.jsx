@@ -75,7 +75,7 @@ const ReviewDetails = () => {
       <div className="flex flex-col-reverse gap-3 border-2 border-white/50 p-4 shadow-md rounded-lg">
         <div className="space-y-2">
           <h2 className="lg:text-4xl md:text-3xl text-2xl font-extrabold">
-            Game Title: {gameTitle}
+            Title: {gameTitle}
           </h2>
 
           <p className="text-gray-600 font-semibold">{reviewDescription}</p>
@@ -113,7 +113,7 @@ const ReviewDetails = () => {
             {!user ? (
               <Link to="/login">
               <p className="md:text-2xl text-lg text-info font-bold md:justify-start justify-center flex gap-1 items-center">
-                Login to Add to WatchList <RiLoginCircleFill className="text-3xl text-violet-600" />
+                Login to Add WatchList <RiLoginCircleFill className="text-3xl text-violet-600" />
               </p>
               </Link>
             ) : (
