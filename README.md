@@ -1,11 +1,13 @@
-# Chill Gamer Application
+# Website Name
+
+<h2><b>Chill Gamer</b></h2>
 
 # Live URL
 
 <b>Live Site Link:</b> https://chill-gamer-application.web.app/
 <br>
 
-# Feature of Website
+# Features of Website
 
 <li><b>Interactive User Interface: A clean and intuitive design for easy navigation and usability.</b></li>
 
