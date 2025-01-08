@@ -88,7 +88,7 @@ const GameWatchList = () => {
                     {watchList?.gameTitle}
                   </td>
                   <td className="font-semibold">
-                    {watchList?.rating}/5
+                    {watchList?.rating}.5
                   </td>
                   <td className="font-semibold">
                     {watchList?.reviewDescription.slice(0, 30)}...

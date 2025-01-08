@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateReview = () => {
   const review = useLoaderData();
+  const navigate = useNavigate();
 
   const handleUpdateReview = (event) => {
     event.preventDefault();
@@ -48,12 +49,14 @@ const UpdateReview = () => {
             showConfirmButton: false,
             timer: 2500,
           });
+
+          navigate("/myReviews");
         }
       });
   };
 
   return (
-    <div className="hero py-20">
+    <div className="hero pt-12 pb-20">
       <div className="lg:w-3/5 w-11/12 mx-auto flex-col">
         <div className="text-center pb-8">
           <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">
@@ -61,7 +64,7 @@ const UpdateReview = () => {
           </h1>
         </div>
 
-        <div className="bg-base-100 shrink-0 shadow-lg rounded-lg">
+        <div className="bg-base-100 bg-opacity-60 shrink-0 shadow-lg rounded-lg">
           <form onSubmit={handleUpdateReview} className="card-body">
             <div className="flex gap-4 md:flex-row flex-col *:w-full">
               <div className="form-control">
@@ -197,7 +200,7 @@ const UpdateReview = () => {
             </div>
 
             <div className="form-control mt-6 w-3/5 mx-auto">
-              <button className="btn bg-violet-600 text-white/90 text-lg hover:btn-primary font-bold rounded-full shadow-md">
+              <button className="btn border-none bg-violet-600 text-white/90 text-lg hover:btn-primary font-bold rounded-full shadow-md">
                 Update
               </button>
             </div>

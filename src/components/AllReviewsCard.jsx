@@ -1,53 +1,71 @@
 import { Link } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 const AllReviewsCard = ({ review }) => {
-  const {
-    _id,
-    gameCover,
-    gameTitle,
-    publishingYear,
-    rating,
-    name,
-    photo,
-  } = review;
+  const { _id, gameCover, gameTitle, publishingYear, rating, name, photo } =
+    review;
 
   return (
-    <div className="border border-gray-200 bg-base-100 rounded-xl shadow-md p-4">
-    <div className="flex flex-col gap-4">
-      <figure>
-        <img
-          className="w-full h-48 rounded-lg"
-          src={gameCover}
-          alt={gameTitle}
-        />
-      </figure>
+    <div className="border border-gray-200 rounded-xl shadow-md hover:scale-105 transition-all hover:shadow-xl p-4">
+      <div className="flex flex-col gap-4">
+        <figure>
+          <img
+            className="w-full h-48 rounded-lg"
+            src={gameCover}
+            alt={gameTitle}
+          />
+        </figure>
 
-      <div className="space-y-2">
-        <h2 className="text-xl text-gray-800 text-center font-bold">{gameTitle}</h2>
-
-        <p className="text-gray-800 text-lg font-bold text-center">
-          Rating: <span className="text-gray-600">{rating}/5</span>
-        </p>
-
-        <p className="text-gray-800 text-lg font-bold text-center">
-          Publish Year: <span className="text-gray-600">{publishingYear}</span>
-        </p>
-
-        <div>
+        <div className="space-y-1">
           <div className="flex justify-between items-center">
-            <h3 className="text-lg text-gray-900 font-bold">By: <span className="text-gray-700">{name}</span></h3>
-            <img className="w-12 h-12 border-4 border-amber-400 rounded-full" src={photo} alt={name} />
-          </div>
-        </div>
+            <h2 className="text-2xl  font-bold">
+              {gameTitle}
+            </h2>
 
-        <Link to={`/review/${_id}`}>
-          <button className="btn bg-fuchsia-600 border-none text-white text-base font-bold rounded-full block lg:w-4/5 w-full mx-auto mt-4 mb-3">
-            Explore Details
-          </button>
-        </Link>
+            <span className=" text-lg font-bold">
+              {publishingYear}
+            </span>
+          </div>
+
+          <div className="flex justify-between items-center">
+            <ReactStars
+              count={5}
+              size={30}
+              isHalf={true}
+              edit={false}
+              value={rating}
+              emptyIcon={<i className="far fa-star"></i>}
+              halfIcon={<i className="fa fa-star-half-alt"></i>}
+              fullIcon={<i className="fa fa-star"></i>}
+              activeColor="#ffd700"
+            />
+
+            <span className=" text-lg font-bold">
+              {rating}.5
+            </span>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg font-bold">
+               By: <span className="">{name}</span>
+              </h3>
+              <img
+                className="w-12 h-12 border-4 border-amber-400 rounded-full"
+                src={photo}
+                alt={name}
+              />
+            </div>
+          </div>
+
+          <Link to={`/review/${_id}`}>
+            <button className="btn bg-fuchsia-600 border-none text-white text-base font-bold rounded-full block lg:w-4/5 w-full mx-auto mt-4">
+              Explore Details
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
-  </div>
   );
 };
 

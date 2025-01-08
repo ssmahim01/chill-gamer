@@ -8,9 +8,11 @@ import GameWatchList from "../pages/GameWatchList";
 import PrivateRoute from "./PrivateRoute";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import ReviewDetails from "../pages/reviewDetails";
+import ReviewDetails from "../pages/ReviewDetails";
 import UpdateReview from "../pages/UpdateReview";
 import ErrorPage from "../pages/ErrorPage";
+import AboutUs from "../pages/AboutUs.jsx";
+import ConnectUs from "../pages/ConnectUs.jsx";
 
 const router = createBrowserRouter([
     {
@@ -45,8 +47,16 @@ const router = createBrowserRouter([
             },
             {
                 path: "/updateReview/:id",
-                element: <UpdateReview></UpdateReview>,
+                element: <PrivateRoute><UpdateReview></UpdateReview></PrivateRoute>,
                 loader: ({params}) => fetch(`https://chill-gamer-server-two.vercel.app/reviews/${params.id}`)
+            },
+            {
+                path: "/about-us",
+                element: <AboutUs />
+            },
+            {
+                path: "/connect-us",
+                element: <ConnectUs />
             },
             {
                 path: "/login",

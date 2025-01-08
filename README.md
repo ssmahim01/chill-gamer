@@ -4,8 +4,14 @@
 
 # Live URL
 
-<b>Live Site Link:</b> https://chill-gamer-application.web.app/
-<br>
+<li><b>Live Site Link:</b> https://chill-gamer-application.web.app/</li>
+<hr>
+
+# Server Repository
+
+<li><b>Link: </b>https://github.com/ssmahim01/chill-gamer-platform-server</li>
+
+<hr>
 
 # Features of Website
 

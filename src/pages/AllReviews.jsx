@@ -8,6 +8,7 @@ const AllReviews = () => {
   const [genresValue, setGenresValue] = useState("");
   const [genres, setGenres] = useState([]);
   const [sortItems, setSortItems] = useState("");
+  // console.log(reviews);
 
   const handleSorted = (type) => {
     setSortItems(type);
@@ -55,7 +56,7 @@ const AllReviews = () => {
     }, []);
 
   return (
-    <div className="lg:w-4/5 md:w-11/12 w-full mx-auto my-14">
+    <div className="w-11/12 mx-auto my-14">
       <div className="flex lg:flex-row flex-col lg:justify-between justify-center items-center lg:gap-0 gap-2 lg:mb-10 mb-7">
         <h2 className="md:text-4xl text-2xl font-extrabold">
           All Reviews{" "}
@@ -70,8 +71,8 @@ const AllReviews = () => {
                 "Puzzle",
               ]}
               loop={false}
-              cursor
               cursorStyle="|"
+              cursor
               typeSpeed={70}
               deleteSpeed={40}
               delaySpeed={1000}
@@ -92,7 +93,7 @@ const AllReviews = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn bg-cyan-600 m-1 text-white font-bold px-6"
+              className="btn bg-cyan-600 border-none m-1 text-white font-bold px-6"
             >
               {sortItems ? `${sortItems}` : "Sort By"}
             </div>
@@ -116,7 +117,7 @@ const AllReviews = () => {
           </div>
         </div>
       </div>
-      <section className="md:w-full w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="md:w-full w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {
         filteredReviews.map((review) => (
           <AllReviewsCard key={review._id} review={review}></AllReviewsCard>

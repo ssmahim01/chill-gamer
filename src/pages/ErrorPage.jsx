@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import errorImg from "/src/assets/error-image.jpg";
+import errorImg from "/src/assets/404.gif";
 import { IoIosReturnLeft } from "react-icons/io";
 
 const ErrorPage = () => {

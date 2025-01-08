@@ -57,13 +57,13 @@ const AddReview = () => {
   };
 
   return (
-    <div className="hero py-20">
+    <div className="hero pt-12 pb-20">
       <div className="lg:w-3/5 w-11/12 mx-auto flex-col">
         <div className="text-center pb-8">
           <h1 className="lg:text-5xl md:text-4xl text-3xl font-bold">Add New Review</h1>
         </div>
 
-        <div className="bg-base-100 shrink-0 shadow-lg rounded-lg">
+        <div className="bg-base-100 bg-opacity-60 shrink-0 shadow-lg rounded-lg">
           <form onSubmit={handleAddReview} className="card-body">
             <div className="flex gap-4 md:flex-row flex-col *:w-full">
               <div className="form-control">

@@ -15,8 +15,8 @@ const Banner = () => {
         loop={true}
         slidesPerView={1}
         // pagination={{clickable:true}}
-        autoplay={{ delay: 3000 }}
-        className="w-full lg:h-96 h-80"
+        autoplay={{ delay: 4000 }}
+        className="w-full lg:h-[410px] h-80"
       >
         <SwiperSlide>
           <div
@@ -29,7 +29,7 @@ const Banner = () => {
           >
             <div className="lg:w-2/4 md:w-3/5 w-11/12 mx-auto flex flex-col justify-center items-center gap-3 lg:py-20 py-7">
               <h2 className="md:text-3xl text-amber-500 text-2xl font-extrabold">HardWorker & Pro Gamer</h2>
-              <p className="text-white/80 font-bold text-center">
+              <p className="text-white/90 font-bold text-center">
                All gamer are try with their best to win any game. But, the game has win and lost two sides. The HardWorker will achieve a success.
               </p>
               <Link to="/addReview">
@@ -52,7 +52,7 @@ const Banner = () => {
           >
             <div className="lg:w-2/4 md:w-3/5 w-11/12 mx-auto flex flex-col justify-center items-center gap-3 lg:py-20 md:py-7 py-4">
               <h2 className="md:text-3xl text-amber-500 text-2xl font-extrabold">Professional Esport Gamer</h2>
-              <p className="text-white/80 font-bold text-center">
+              <p className="text-white/90 font-bold text-center">
                 The professional esport gamers will play for their different purpose. They have perseverance and always try to be stay with patience.
               </p>
               <Link to="/addReview">
@@ -75,7 +75,7 @@ const Banner = () => {
           >
             <div className="lg:w-2/4 md:w-3/5 w-11/12 mx-auto flex flex-col justify-center items-center gap-3 lg:py-20 py-7">
               <h2 className="md:text-4xl text-amber-500 text-3xl font-extrabold">Game is Over</h2>
-              <p className="text-white/80 font-bold text-center">
+              <p className="text-white/90 font-bold text-center">
                 Most of the gamers are frustrated when their game is over and do not win the game. But, a wise gamer will not frustrated.
               </p>
               <Link to="/addReview">
