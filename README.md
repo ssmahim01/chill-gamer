@@ -6,7 +6,7 @@
 
 **A gaming review platform with interactive features to enhance user experience. Users can easily explore and add review related to the games. Also they can add their watchlist of the shared game reviews.**
 
-[![Website](https://img.shields.io/badge/Live%20Demo-Popular%20Medical%20Camp-brightgreen)](https://chill-gamer-application.web.app) 
+[![Website](https://img.shields.io/badge/Live%20Demo-Chill%20Gamer%20Platform-brightgreen)](https://chill-gamer-application.web.app) 
 [![Backend Repository](https://img.shields.io/badge/Backend%20Repository-Click%20Here-blue)](https://github.com/ssmahim01/chill-gamer-platform-server)
 
 ---
