@@ -27,7 +27,7 @@
 
 ✔ **Interactive UI** – Clean, user-friendly interface for easy navigation.  
 ✔ **Data Fetching** – Fetches reviews dynamically using API requests.  
-✔ **Authentication** – Secure login/register via Firebase (Google, GitHub, email/password).  
+✔ **Authentication** – Secure login/register via Firebase (Google, email/password).  
 ✔ **Sorting & Filtering** – Sort reviews by **rating** or **publish year**, and filter by genre.  
 ✔ **Dynamic Routes** – Pages for **Home, All Reviews, Review Details, My Reviews**, and **Watchlist**.  
 
