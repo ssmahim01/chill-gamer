@@ -6,8 +6,8 @@
 
 **A gaming review platform with interactive features to enhance user experience.**
 
-[![Website](https://chill-gamer-application.web.app)  
-[![Backend Repository](https://github.com/ssmahim01/chill-gamer-platform-server)  
+[![Website](https://img.shields.io/badge/Live%20Demo-Popular%20Medical%20Camp-brightgreen)](https://chill-gamer-application.web.app) 
+[![Backend Repository](https://img.shields.io/badge/Backend%20Repository-Click%20Here-blue)](https://github.com/ssmahim01/chill-gamer-platform-server)
 
 ---
 
