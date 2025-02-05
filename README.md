@@ -111,7 +111,6 @@ For backend setup, refer to the **[Backend Repository](https://github.com/ssmahi
 ### ✅ Logging In
 - Users can register/login with:
   - **Google Authentication**
-  - **GitHub Authentication**
   - **Email & Password Authentication**
 
 ### ✅ Sorting & Filtering Reviews
