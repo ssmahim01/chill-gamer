@@ -1,11 +1,13 @@
 <div align="center">
-  <h1>🎮 Chill Gamer</h1>
-  <p>A gaming review platform with interactive features, sorting, filtering, and authentication.</p>
-  <img src="https://github.com/ssmahim01/chill-gamer-platform-server/blob/main/public/chill-gamer-banner.png" width="100%" height="340" alt="Chill Gamer Banner">
-  <br>
-  <a href="https://chill-gamer-application.web.app/"><b>🔗 Live Demo</b></a> |
-  <a href="https://github.com/ssmahim01/chill-gamer-platform-server"><b>📂 Backend Repository</b></a>
+  <img width="100%" height="340" src="https://github.com/ssmahim01/chill-gamer-platform/blob/main/public/chill-gamer-web.png"  />
 </div>
+
+# 🎮 Chill Gamer
+
+**A gaming review platform with interactive features to enhance user experience.**
+
+[![Website](https://chill-gamer-application.web.app)  
+[![Backend Repository](https://github.com/ssmahim01/chill-gamer-platform-server)  
 
 ---
 
@@ -84,7 +86,7 @@ npm run dev
 ```
 
 🔹 This will start the development server, and you can access it at:  
-📌 **`http://localhost:5173/`**  
+📌 **`http://localhost:5173`**  
 
 For backend setup, refer to the **[Backend Repository](https://github.com/ssmahim01/chill-gamer-platform-server)**.
 
