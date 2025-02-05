@@ -1,7 +1,7 @@
 <div align="center">
   <h1>🎮 Chill Gamer</h1>
   <p>A gaming review platform with interactive features, sorting, filtering, and authentication.</p>
-  <a href="https://chill-gamer-application.web.app/"><img src="https://github.com/ssmahim01/chill-gamer-platform-server/blob/main/public/chill-gamer-banner.png" width="100%" alt="Chill Gamer Banner"></a>
+  <img src="https://github.com/ssmahim01/chill-gamer-platform-server/blob/main/public/chill-gamer-banner.png" width="100%" height="340" alt="Chill Gamer Banner">
   <br>
   <a href="https://chill-gamer-application.web.app/"><b>🔗 Live Demo</b></a> |
   <a href="https://github.com/ssmahim01/chill-gamer-platform-server"><b>📂 Backend Repository</b></a>
