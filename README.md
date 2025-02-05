@@ -100,7 +100,9 @@ For backend setup, refer to the **[Backend Repository](https://github.com/ssmahi
 | **react-icons** | [Docs](https://react-icons.github.io/react-icons) |
 | **sweetalert2** | [Docs](https://sweetalert2.github.io) |
 | **swiper-js** | [Docs](https://swiperjs.com) |
-| **"react-simple-typewriter** | [Docs](https://www.npmjs.com/package/react-simple-typewriter) |
+| **react-simple-typewriter** | [Docs](https://www.npmjs.com/package/react-simple-typewriter) |
+| **react-tooltip** | [Docs](https://www.npmjs.com/package/react-tooltip) |
+| **react-toastify** | [Docs](https://www.npmjs.com/package/react-toastify) |
 
 ---
 
