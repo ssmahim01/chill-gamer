@@ -13,15 +13,13 @@
 
 ## 🛠️ Used Main Technologies
 
-| Category        | Technologies |
-|----------------|-------------|
-| **Frontend**   | React, Tailwind CSS, Daisy UI |
-| **Backend**    | Node.js, Express.js |
-| **Database**   | MongoDB |
-| **Authentication** | Firebase Authentication |
-| **Routing**    | React Router |
-| **Animation**  | Lottie React |
-| **Hosting**    | Firebase (Frontend), Vercel (Backend) |
+- **Frontend:** React, Tailwind CSS, Daisy UI  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Authentication:** Firebase Authentication  
+- **Routing:** React Router  
+- **Animation:** Lottie React  
+- **Hosting:** Firebase (Frontend), Vercel (Backend)  
 
 ---
 
@@ -89,6 +87,20 @@ npm run dev
 📌 **`http://localhost:5173`**  
 
 For backend setup, refer to the **[Backend Repository](https://github.com/ssmahim01/chill-gamer-platform-server)**.
+
+---
+
+## 📚 Used npm Packages
+
+| Package | Documentation |
+|---------|--------------|
+| **react-fast-marquee** | [Docs](https://www.react-fast-marquee.com) |
+| **lottie-react** | [Docs](https://www.npmjs.com/package/lottie-react) |
+| **email-js** | [Docs](https://www.emailjs.com) |
+| **react-icons** | [Docs](https://react-icons.github.io/react-icons) |
+| **sweetalert2** | [Docs](https://sweetalert2.github.io) |
+| **swiper-js** | [Docs](https://swiperjs.com) |
+| **"react-simple-typewriter** | [Docs](https://www.npmjs.com/package/react-simple-typewriter) |
 
 ---
 
